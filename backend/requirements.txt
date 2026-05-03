@@ -10,7 +10,7 @@ librosa==0.10.2.post1
 soundfile==0.12.1
 nltk==3.8.1
 scikit-learn==1.5.2
-numpy==2.1.1
+numpy==1.26.4
 pandas==2.2.2
 python-dotenv==1.0.1
 requests==2.32.3

@@ -1,0 +1,33 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.env.local
+.venv/
+env/
+
+# Models & Data
+models/*.h5
+models/*.pkl
+models/*.bin
+models/*.safetensors
+data/
+downloads/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Deployment
+Procfile*
+runtime.txt

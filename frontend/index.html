@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Modal Emotion Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Emotion Detection Dashboard</h1>
+        
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('text')">Text</button>
+            <button class="tab-btn" onclick="switchTab('speech')">Speech</button>
+            <button class="tab-btn" onclick="switchTab('face')">Face</button>
+            <button class="tab-btn" onclick="switchTab('video')">Video</button>
+        </div>
+        
+        <!-- Text Tab -->
+        <div id="text-tab" class="tab-content active">
+            <textarea id="text-input" placeholder="Type your text here..."></textarea>
+            <button onclick="detectText()">Analyze Text</button>
+        </div>
+        
+        <!-- Speech Tab -->
+        <div id="speech-tab" class="tab-content">
+            <button id="record-btn" onclick="toggleRecord()">Record Speech</button>
+            <audio id="audio-player" controls style="display:none;"></audio>
+            <button onclick="detectSpeech()">Analyze Audio</button>
+        </div>
+        
+        <!-- Face Tab -->
+        <div id="face-tab" class="tab-content">
+            <video id="webcam" width="320" height="240" autoplay muted></video>
+            <canvas id="face-canvas" style="display:none;"></canvas>
+            <button onclick="detectFace()">Capture & Analyze</button>
+            <input type="file" id="image-upload" accept="image/*">
+        </div>
+        
+        <!-- Video Tab -->
+        <div id="video-tab" class="tab-content">
+            <input type="file" id="video-upload" accept="video/*">
+            <button onclick="detectVideo()">Analyze Video</button>
+        </div>
+        
+        <!-- Results -->
+        <div class="results">
+            <h2>Detected Emotions</h2>
+            <canvas id="emotion-chart"></canvas>
+            <div id="emotion-report"></div>
+            <button onclick="fusionAnalyze()">Full Fusion Analysis</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

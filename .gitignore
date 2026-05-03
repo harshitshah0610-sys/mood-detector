@@ -29,5 +29,6 @@ Thumbs.db
 *.log
 
 # Deployment
-Procfile*
+# Procfile*
+runtime.txt
 runtime.txt
